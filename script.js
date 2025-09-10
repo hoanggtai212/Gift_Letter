@@ -45,13 +45,31 @@ $(document).ready(function () {
       }, 600);
   });
 
-  function nextLyric() {
-      currentPage = currentPage < totalPages ? currentPage + 1 : 1;
-      updateActivePage();
-  }
+ function nextLyric() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        updateActivePage();
+        if (currentPage === totalPages) {
+            // Khi đến trang cuối cùng, tự động đóng sau 1s
+            setTimeout(closeLetter, 1000);
+        }
+    }
+}
+
+function closeLetter() {
+    envelope.removeClass("open").addClass("close");
+    isOpen = false;
+    setTimeout(function () {
+        currentPage = 1;
+        updateActivePage();
+        resetBtn.hide();
+        openBtn.show();
+    }, 600);
+}
 
   function updateActivePage() {
       $(".lyric-page").removeClass("active");
       $("#page" + currentPage).addClass("active");
   }
 });
+
