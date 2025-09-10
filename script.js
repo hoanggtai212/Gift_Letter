@@ -45,14 +45,14 @@ $(document).ready(function () {
       }, 600);
   });
 
- function nextLyric() {
+function nextLyric() {
     if (currentPage < totalPages) {
+        // Chưa tới trang cuối -> sang trang tiếp theo
         currentPage++;
         updateActivePage();
-        if (currentPage === totalPages) {
-            // Khi đến trang cuối cùng, tự động đóng sau 1s
-            setTimeout(closeLetter, 1000);
-        }
+    } else if (currentPage === totalPages) {
+        // Đang ở trang cuối -> bấm thêm lần nữa thì đóng thư
+        closeLetter();
     }
 }
 
@@ -72,4 +72,5 @@ function closeLetter() {
       $("#page" + currentPage).addClass("active");
   }
 });
+
 
