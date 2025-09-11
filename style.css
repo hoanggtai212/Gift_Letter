@@ -22,22 +22,23 @@ body {
     cursor: auto;
 }
 
+/* ✅ sửa lại đúng class */
 .envelope-wrapper {
-    height: 760px; /* x2 từ 380px */
+    height: 380px;
     margin-top: 50px;
     animation: float 3s ease-in-out infinite;
 }
 
 #envelope {
     position: relative;
-    width: 760px;   /* x2 từ 380px */
-    height: 480px;  /* x2 từ 240px */
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    width: 380px;
+    height: 240px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
     margin: 0 auto;
     top: 150px;
     background-color: var(--color-flap);
-    box-shadow: 0 8px 40px rgba(0,0,0,.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,.1);
     cursor: pointer;
 }
 
@@ -49,21 +50,21 @@ body {
 }
 
 .flap {
-    border-left: 380px solid transparent;
-    border-right: 380px solid transparent;
-    border-bottom: 184px solid transparent;
-    border-top: 300px solid var(--color-flap);
+    border-left: 190px solid transparent;
+    border-right: 190px solid transparent;
+    border-bottom: 92px solid transparent;
+    border-top: 150px solid var(--color-flap);
     transform-origin: top;
     pointer-events: none;
 }
 
 .pocket {
-    border-left: 380px solid var(--color-env);
-    border-right: 380px solid var(--color-env);
-    border-bottom: 180px solid var(--color-env2);
-    border-top: 300px solid transparent;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-left: 190px solid var(--color-env);
+    border-right: 190px solid var(--color-env);
+    border-bottom: 90px solid var(--color-env2);
+    border-top: 150px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .letter {
@@ -73,9 +74,9 @@ body {
     margin: 0 auto;
     height: 95%;
     top: 0%;
-    border-radius: 12px;
-    box-shadow: 0 6px 60px rgba(0,0,0,.15);
-    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 0 2px 26px rgba(0,0,0,.08);
+    padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -101,26 +102,25 @@ body {
     color: #d46a84;
     text-align: center;
     line-height: 1.4;
-    padding: 20px;
+    padding: 5px;
     height: 100%;
     overflow-y: auto;
 }
 
 .message p {
-    margin: 20px 0;
-    font-size: 2.5em; /* chữ vừa với lá thư */
-    line-height: 1.4;
+    margin: 10px 0;
+    font-size: 1.4em;
     text-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
 .lyrics {
     display: none;
-    font-size: 2.4em;
+    font-size: 1em;
     line-height: 1.5;
     text-align: center;
     opacity: 0;
     transition: opacity 1s ease-in;
-    max-height: 360px;
+    max-height: 130px;
     overflow-y: auto;
 }
 
@@ -154,26 +154,26 @@ body {
 }
 
 .open .letter {
-    transform: translateY(-180px) rotate(-2deg); /* kéo lên vừa */
+    transform: translateY(-60px) rotate(-2deg);
     transition: transform 0.4s 0.6s ease, z-index 0.6s;
     z-index: 2;
 }
 
 .letter-corner {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 4px solid #ffd1dc;
-    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffd1dc;
+    border-radius: 5px;
     z-index: 3;
 }
 
-.corner-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
-.corner-br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+.corner-tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+.corner-br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
 
 .hearts, .sparkles {
     position: absolute;
-    top: 180px;
+    top: 90px;
     left: 0;
     right: 0;
     z-index: 2;
@@ -189,12 +189,12 @@ body {
 .heart:after {
     content: "";
     position: absolute;
-    left: 50px;
+    left: 25px;
     top: 0;
-    width: 50px;
-    height: 80px;
+    width: 25px;
+    height: 40px;
     background: var(--color-heart);
-    border-radius: 50px 50px 0 0;
+    border-radius: 25px 25px 0 0;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
 }
@@ -206,8 +206,8 @@ body {
 }
 
 .sparkle {
-    width: 16px;
-    height: 16px;
+    width: 8px;
+    height: 8px;
     background: var(--color-sparkle);
     border-radius: 50%;
     animation: sparkleTwinkle 1s infinite;
@@ -219,28 +219,28 @@ body {
     animation: none;
 }
 
-.a1 { left: 40%; transform: scale(1.2); animation: slideUp 4s linear infinite, sideSway 2s ease-in-out infinite alternate; }
-.a2 { left: 110%; animation: slideUp 5s linear infinite, sideSway 4s ease-in-out infinite alternate; }
-.a3 { left: 20%; transform: scale(1.6); animation: slideUp 7s linear infinite, sideSway 2s ease-in-out infinite alternate; }
+.a1 { left: 20%; transform: scale(0.6); animation: slideUp 4s linear infinite, sideSway 2s ease-in-out infinite alternate; }
+.a2 { left: 55%; animation: slideUp 5s linear infinite, sideSway 4s ease-in-out infinite alternate; }
+.a3 { left: 10%; transform: scale(0.8); animation: slideUp 7s linear infinite, sideSway 2s ease-in-out infinite alternate; }
 
-.s1 { left: 60%; animation: sparkleUp 3s linear infinite; }
-.s2 { left: 120%; animation: sparkleUp 4s linear infinite; }
-.s3 { left: 90%; animation: sparkleUp 5s linear infinite; }
+.s1 { left: 30%; animation: sparkleUp 3s linear infinite; }
+.s2 { left: 60%; animation: sparkleUp 4s linear infinite; }
+.s3 { left: 45%; animation: sparkleUp 5s linear infinite; }
 
 @keyframes slideUp {
     0% { top: 0; }
-    100% { top: -1200px; }
+    100% { top: -600px; }
 }
 
 @keyframes sideSway {
     0% { margin-left: 0; }
-    50% { margin-left: 100px; }
+    50% { margin-left: 50px; }
     100% { margin-left: 0; }
 }
 
 @keyframes sparkleUp {
     0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-1000px) rotate(360deg); opacity: 0; }
+    100% { transform: translateY(-500px) rotate(360deg); opacity: 0; }
 }
 
 @keyframes sparkleTwinkle {
@@ -250,28 +250,28 @@ body {
 
 .controls {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .controls button {
     font-weight: 600;
     transition: all 0.3s ease;
     background-color: var(--color-env);
-    border: 4px solid var(--color-env2);
-    border-radius: 40px;
+    border: 2px solid var(--color-env2);
+    border-radius: 20px;
     color: white;
-    padding: 24px 50px;
-    margin: 20px;
-    font-size: 32px;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     font-family: Arial, sans-serif;
 }
 
 .controls button:hover {
     background-color: var(--color-env2);
-    transform: translateY(-6px) scale(1.05);
-    box-shadow: 0 14px 50px rgba(0,0,0,0.3);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 7px 25px rgba(0,0,0,0.2);
 }
 
 .open .lyrics {
@@ -281,17 +281,18 @@ body {
 
 .page-indicator {
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 0.8em;
     color: #d46a84;
     opacity: 0.7;
 }
 
+/* ✅ thêm animation float cho phong bì */
 @keyframes float {
     0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-30px); }
+    50%  { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
-}
+} code css
