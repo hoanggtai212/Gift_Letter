@@ -20,24 +20,24 @@ body {
     align-items: center;
     user-select: none;
     cursor: auto;
-    font-size: 20px; /* chữ cơ bản lớn hơn */
+    font-size: 22px; /* chữ cơ bản lớn hơn */
 }
 
 /* Phong bì */
 .envelope-wrapper {
-    height: 480px; /* cao hơn để cân đối với thư */
-    margin-top: 60px;
+    height: 600px; /* cao hơn */
+    margin-top: 80px;
     animation: float 3s ease-in-out infinite;
 }
 
 #envelope {
     position: relative;
-    width: 480px; /* to hơn */
-    height: 300px;
+    width: 600px; /* rộng hơn */
+    height: 400px; /* cao hơn */
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     margin: 0 auto;
-    top: 120px;
+    top: 100px;
     background-color: var(--color-flap);
     box-shadow: 0 4px 20px rgba(0,0,0,.1);
     cursor: pointer;
@@ -51,19 +51,19 @@ body {
 }
 
 .flap {
-    border-left: 240px solid transparent;
-    border-right: 240px solid transparent;
-    border-bottom: 110px solid transparent;
-    border-top: 180px solid var(--color-flap);
+    border-left: 300px solid transparent;
+    border-right: 300px solid transparent;
+    border-bottom: 120px solid transparent;
+    border-top: 220px solid var(--color-flap);
     transform-origin: top;
     pointer-events: none;
 }
 
 .pocket {
-    border-left: 240px solid var(--color-env);
-    border-right: 240px solid var(--color-env);
-    border-bottom: 110px solid var(--color-env2);
-    border-top: 180px solid transparent;
+    border-left: 300px solid var(--color-env);
+    border-right: 300px solid var(--color-env);
+    border-bottom: 120px solid var(--color-env2);
+    border-top: 220px solid transparent;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -75,9 +75,9 @@ body {
     margin: 0 auto;
     height: 95%;
     top: 0%;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 26px rgba(0,0,0,.08);
-    padding: 25px; /* padding lớn hơn để chữ không sát viền */
+    padding: 30px; /* padding lớn hơn */
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -103,7 +103,7 @@ body {
     font-family: 'Pacifico', cursive;
     color: #d46a84;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.8;
     padding: 5px;
     height: 100%;
     overflow-y: auto;
@@ -111,18 +111,18 @@ body {
 
 .message p {
     margin: 10px 0;
-    font-size: 2em; /* chữ lớn, dễ đọc */
+    font-size: 2.5em; /* chữ lớn hơn */
     text-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
 
 .lyrics {
     display: none;
-    font-size: 1.5em; /* chữ lớn hơn */
-    line-height: 1.6;
+    font-size: 2em; /* chữ lớn hơn */
+    line-height: 1.8;
     text-align: center;
     opacity: 0;
     transition: opacity 1s ease-in;
-    max-height: 130px;
+    max-height: 180px;
     overflow-y: auto;
 }
 
@@ -265,9 +265,9 @@ body {
     border: 2px solid var(--color-env2);
     border-radius: 20px;
     color: white;
-    padding: 15px 30px; /* to hơn */
+    padding: 18px 35px; /* to hơn */
     margin: 10px;
-    font-size: 18px; /* chữ to hơn */
+    font-size: 20px; /* chữ to hơn */
     cursor: pointer;
     box-shadow: 0 5px 20px rgba(0,0,0,0.15);
     font-family: Arial, sans-serif;
@@ -291,7 +291,7 @@ body {
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.1em;
     color: #d46a84;
     opacity: 0.7;
 }
@@ -299,6 +299,6 @@ body {
 /* Animation float cho phong bì */
 @keyframes float {
     0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-15px); }
+    50%  { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
