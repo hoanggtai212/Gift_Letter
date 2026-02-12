@@ -5,7 +5,7 @@ $(document).ready(function () {
   const audioEl = $("#sound")[0];
 
   let currentPage = 1;
-  const totalPages = 28;
+  const totalPages = 29;
   let isOpen = false;
   let hasPlayed = false;
   let isClosing = false; // guard để tránh đóng lặp
@@ -79,4 +79,5 @@ $(document).ready(function () {
       $("#page" + currentPage).addClass("active");
   }
 });
+
 
