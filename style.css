@@ -154,7 +154,7 @@ body {
 }
 
 .open .letter {
-    transform: translateY(-110px) rotate(-2deg);
+    transform: translateY(-80px) rotate(-2deg);
     transition: transform 0.4s 0.6s ease, z-index 0.6s;
     z-index: 2;
 }
@@ -296,4 +296,5 @@ body {
     50%  { transform: translateY(-15px); }
     100% { transform: translateY(0px); }
 }
+
 
